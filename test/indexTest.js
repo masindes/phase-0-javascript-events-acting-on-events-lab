@@ -6,19 +6,15 @@ describe('moveDodgerLeft()', () => {
   })
 
   it('moves the DODGER to the left', () => {
-    let left = dodger.style.left
+    var left = dodger.style.left
     left = parseInt(left)
 
     moveDodgerLeft()
 
-    let newPosition = dodger.style.left
+    var newPosition = dodger.style.left
     newPosition = parseInt(newPosition)
 
-    if (left > 0){
-      expect(newPosition).to.be.below(left)
-    } else {
-      expect(newPosition).to.equal(left)
-    }
+    expect(newPosition).to.be.below(left)
   })
 })
 
@@ -28,19 +24,14 @@ describe('moveDodgerRight()', () => {
   })
 
   it('moves the DODGER to the right', () => {
-    let left = dodger.style.left
+    var left = dodger.style.left
     left = parseInt(left)
 
     moveDodgerRight()
 
-    let newPosition = dodger.style.left
+    var newPosition = dodger.style.left
     newPosition = parseInt(newPosition)
-    
-    if (left < 360){
-      expect(newPosition).to.be.above(left)
-    } else{
-      expect(newPosition).to.equal(left)
-    }
-    
+
+    expect(newPosition).to.be.above(left)
   })
 })
